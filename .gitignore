@@ -1,0 +1,9 @@
+.python-version
+.env*
+.env.test
+*__pycache__*
+*.pyc
+env/*
+venv/*
+Pipfile
+supervisord.log
