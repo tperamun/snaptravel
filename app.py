@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 
 @app.route('/', methods=['POST', 'GET'])
-def hello_world():
+def form_submission():
 
   response_1 = None
   response_2 = None
