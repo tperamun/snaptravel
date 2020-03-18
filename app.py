@@ -52,18 +52,12 @@ def form_submission():
     checkin = request.form.get('checkin')
     checkout = request.form.get('checkout')
 
-
     form_body_1 = { 'city': city, 'checkin': checkin, 'checkout': checkout, 'provider': 'snaptravel'}
     form_body_2 = { 'city': city, 'checkin': checkin, 'checkout': checkout, 'provider': 'retail'}
 
     # make async request
     asyncio.run(make_post_requests(form_body_1, form_body_2))
-    return render_template('result.html')
-
-        
     
- 
-  
-
+    return render_template('result.html')
 
   return render_template('demo.html')
