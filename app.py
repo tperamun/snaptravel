@@ -55,6 +55,4 @@ def form_submission():
     return render_template('result.html')
 
 
-
-
   return render_template('demo.html')
