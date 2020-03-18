@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 import requests
 import json
-import pandas as pd
+import pandas as pd #a quick way to generate some html from a given list
 
 app = Flask(__name__)
 
@@ -48,6 +48,7 @@ def hello_world():
 
     data_frame = pd.DataFrame(common_hotels)    
     dfg = data_frame.groupby(['id', 'hotel_name', 'num_reviews', 'address', 'num_stars', 'amenities', 'image_url', 'snaptravel_price', 'retail_price']).sum()
+
 
     dfg.to_html('templates/result.html')
 
