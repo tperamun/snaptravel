@@ -19,7 +19,9 @@ async def make_post_requests(form_body_1, form_body_2):
         snaptravel_hotels = response_1['hotels']
         retail_hotels = response_2['hotels']
 
+        # store the hotels common in both responses
         common_hotels = []
+
 
         for s_hotel in snaptravel_hotels:
 
@@ -43,9 +45,6 @@ async def make_post_requests(form_body_1, form_body_2):
 
 @app.route('/', methods=['POST', 'GET'])
 def form_submission():
-
-  response_1 = None
-  response_2 = None
 
   if request.method == 'POST':
     city = request.form.get('city')
